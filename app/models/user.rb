@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
 
   validates :email, presence: true
+  validates :first_name, presence: true
+  validates :last_name, presence: true
+
+  enum role: [:patient, :nurse, :doctor, :admin]
+  after_initialize :set_default_role, :if => :new_record?
+  def set_default_role
+    self.role ||= :patient
+  end
 end

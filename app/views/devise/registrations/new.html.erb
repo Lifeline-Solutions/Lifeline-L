@@ -27,7 +27,11 @@
 
             <div>
               <label for="Role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">Your Role</label>
-              <%= f.number_field :role, autofocus: true, autocomplete: "role", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "First Name", required: true %>
+              <div class="flex gap-3 border p-2 rounded-lg border-gray-300">
+                <%= f.radio_button :role, 'patient' %> Patient<br />
+                <%= f.radio_button :role, 'nurse' %> Nurse<br />
+                <%= f.radio_button :role, 'doctor' %> Doctor<br />
+              </div>
             </div>
 
 
@@ -53,7 +57,7 @@
                 <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
               </div>
             </div>
-            <%= f.submit "Sign Up", class: "border border-[#fff] p-2 text-white w-32 uppercase" %>
+            <%= f.submit "Sign Up", class: "border border-[#0A0A1F] text-[#0A0A1F] dark:border-[#fff] p-2 dark:text-white w-32 uppercase" %>
             <p class="text-sm font-light text-gray-500 dark:text-gray-400">
               Already have an account?
               <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
