@@ -8,8 +8,8 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-  enum role: [:patient, :nurse, :doctor, :admin]
-  after_initialize :set_default_role, :if => :new_record?
+  enum role: %i[patient nurse doctor admin]
+  after_initialize :set_default_role, if: :new_record?
   def set_default_role
     self.role ||= :patient
   end
