@@ -3,7 +3,5 @@ class HomeController < ApplicationController
 
   def index
     @patients = User.where(role: :patient)
-  
- 
   end
 end
