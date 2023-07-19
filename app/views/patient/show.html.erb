@@ -4,8 +4,10 @@
   <p><%= @patient.marital_status %></p>
   <p><%= @patient.phone_number %></p>
   <p><%= @patient.residence %></p>
-  <p><%= @patient.photo %></p>
-  <p><%= @patient.user_id %></p>
+  <p>
+    <%= image_tag(@patient.photo, class:"w-[300px] h-auto") %></p>
+  <p><%= @patient.user_id %>
+  </p>
 
 
 </div>

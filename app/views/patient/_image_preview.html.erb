@@ -1,0 +1,19 @@
+<div data-controller="previews">
+  <div class="flex flex-wrap -mx-3 mb-6">
+    <div class="w-full md:w-1/2 px-3 mb-6 md:mb-0">
+      <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" for="grid-first-name">
+        Passport Photo
+      </label>
+      <%= f.file_field :photo, direct_upload: true, data: { preview_target: "input", action: "change->previews#preview" },
+                       placeholder: "Passport Photo", required: true %>
+      <% if @patient.photo.attached? %>
+        <%= image_tag(patient.photo, data: { preview_target: "preview"}, class:"w-[300px] h-[400px]") %>
+        <% else %>
+        <%= image_tag "", data: { preview_target: "preview"}, class:"w-[300px] h-[300px]" %>
+
+      <% end %>
+      <p class="text-red-500 text-xs italic">Please fill out this field.</p>
+    </div>
+  </div>
+
+</div>
