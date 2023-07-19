@@ -7,11 +7,11 @@ Lifeline medical records is a solution that is used to create, update and read m
 ![ERD Diagram1 (2)](https://user-images.githubusercontent.com/48310207/201509109-1173932a-9df2-49ab-bf94-31e20ec3fb17.jpg)
 
 ## Cloning the Project
-git clone https://github.com/valuechainfactory/team_Limon_arsenal_life_line.git
+git clone https://github.com/Lifeline-Solutions/Lifeline-L.git
 
 ```bash
-- cd team_Limon_arsenal_life_line
-- rails s
+- cd Lifeline-L
+- ./bin/dev
 ```
 
 ## Built with
@@ -25,6 +25,7 @@ Vscode or anyother Setup
 Ruby
 Rails
 PostgreSql
+Tailwind CSS
 
 ## Development Database
 ```bash
