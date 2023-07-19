@@ -1,5 +1,4 @@
 class PatientController < ApplicationController
-
   def index
     @patients = Patient.all
   end
@@ -23,7 +22,6 @@ class PatientController < ApplicationController
       end
     end
   end
-
 
   def destroy
     @patient = Patient.find(params[:id])
