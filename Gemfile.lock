@@ -222,6 +222,7 @@ GEM
     zeitwerk (2.6.8)
 
 PLATFORMS
+  x86_64-darwin-20
   x86_64-darwin-22
 
 DEPENDENCIES
@@ -234,7 +235,7 @@ DEPENDENCIES
   jsbundling-rails
   pg (~> 1.1)
   puma (~> 5.0)
-  rails (~> 7.0.6)
+  rails (~> 7.0.4)
   selenium-webdriver
   sprockets-rails
   stimulus-rails
