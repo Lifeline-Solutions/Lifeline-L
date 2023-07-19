@@ -50,7 +50,7 @@ rails db:migrate
 ```bash 
 bundle install
 
-rails s
+./bin/dev
 ```
 ## Run tests
 ```bash
