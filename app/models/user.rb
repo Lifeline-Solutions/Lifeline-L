@@ -14,5 +14,5 @@ class User < ApplicationRecord
     self.role ||= :patient
   end
   has_one :patient
-  belongs_to :patient
+  belongs_to :patient, optional: true
 end
