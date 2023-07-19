@@ -13,4 +13,6 @@ class User < ApplicationRecord
   def set_default_role
     self.role ||= :patient
   end
+  has_one :patient
+  belongs_to :patient
 end
