@@ -8,7 +8,9 @@ class User < ApplicationRecord
   validates :first_name, presence: true
   validates :last_name, presence: true
 
-  enum role: %i[patient nurse doctor admin]
+  has_one_attached :photo_id
+
+  enum role: %i[patient nurse lab_technician radiologist doctor admin]
   after_initialize :set_default_role, if: :new_record?
   def set_default_role
     self.role ||= :patient
