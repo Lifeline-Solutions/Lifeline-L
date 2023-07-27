@@ -24,12 +24,18 @@
               <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Your email</label>
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "name@company.com", required: true %>
             </div>
+            <div>
+              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Your email</label>
+              <%= f.file_field :photo_id, autofocus: true, autocomplete: "email", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "name@company.com", required: true %>
+            </div>
 
             <div>
               <label for="Role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Your Role</label>
               <div class="flex gap-3 border p-2 rounded-lg border-gray-300">
                 <%= f.radio_button :role, 'patient' %> Patient<br />
                 <%= f.radio_button :role, 'nurse' %> Nurse<br />
+                <%= f.radio_button :role, 'radiology' %>Radiology<br />
+                <%= f.radio_button :role, 'lab_technician' %>Lab Technician<br />
                 <%= f.radio_button :role, 'doctor' %> Doctor<br />
               </div>
             </div>
