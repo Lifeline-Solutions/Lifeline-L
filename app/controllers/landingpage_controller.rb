@@ -1,4 +1,5 @@
 class LandingpageController < ApplicationController
-  def index
-  end
+    #rubocop:disable all
+    def index
+    end
 end

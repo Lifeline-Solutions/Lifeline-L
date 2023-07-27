@@ -25,7 +25,7 @@ Metrics/AbcSize:
 Metrics/ClassLength:
   Max: 150
 Metrics/BlockLength:
-  AllowedMethods: ['describe']
+  AllowedMethods: ["describe"]
   Max: 30
 
 Style/Documentation:
@@ -37,6 +37,8 @@ Style/EachForSimpleLoop:
 Style/AndOr:
   Enabled: false
 Style/DefWithParentheses:
+  Enabled: false
+Style/EmptyMethod:
   Enabled: false
 Style/FrozenStringLiteralComment:
   EnforcedStyle: never
