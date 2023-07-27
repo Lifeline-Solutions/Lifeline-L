@@ -23,12 +23,9 @@
     <%= image_tag('lifeline-logo.png', alt: "logo", class: "w-[147px] h-[119px] object-contain mt-6") %>
 
     <div class="flex w-[90%] mx-auto  gap-1 flex-col">
-      <p class="text-[#565151] uppercase  ">ID Number</p>
-      <input
-        type="text"
-        placeholder="Full Name"
-        class="w-[100%]  h-[50px]  bg-[#F0F2F2] p-2"
-        />
+      <p class="text-[#565151] uppercase  ">Identification Details</p>
+      <%= f.text_field :id_number, class: "w-[100%]  h-[50px]  bg-[#F0F2F2] p-2", placeholder: "Register Doctor ID/ Registered Nurse ID/ Resident ID", required: true %>
+
     </div>
     <div class="flex w-[90%] flex-row  gap-6 justify-between">
       <div class="flex  w-[50%] mx-auto  gap-1 flex-col">
@@ -62,11 +59,11 @@
     <div class="flex w-[90%] flex-row  gap-6 justify-between">
       <div class="flex  w-[50%] mx-auto  gap-1 flex-col">
         <p class="text-[#565151] uppercase  ">Phone Number</p>
-        <%= f.number_field :first_name, class: "w-[100%]  h-[50px]  bg-[#F0F2F2] p-2", placeholder: "Enter Your Phone No.", required: true%>
+        <%= f.number_field :phone_number, class: "w-[100%]  h-[50px]  bg-[#F0F2F2] p-2", placeholder: "Enter Your Phone No.", required: true%>
       </div>
 
       <div class="flex  w-[50%] mx-auto  gap-1 flex-col">
-        <p class="text-[#565151] uppercase  ">ID Photo</p>
+        <p class="text-[#565151] uppercase  ">Upload Photo</p>
         <%= f.file_field :photo_id, class: "w-[100%]  h-[50px]  bg-[#F0F2F2] p-2", placeholder: "Last Name" %>
       </div>
     </div>
