@@ -1,32 +1,49 @@
 <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
-  <section class="bg-[#0A0A1F]">
-    <div class="flex flex-col items-center justify-center px-6 py-8 mx-auto ">
-      <a href="#" class="flex items-center mb-6 text-2xl font-semibold text-gray-900 dark:text-white">
-        <%= image_tag('lifeline-logo.png', alt: "logo") %>
-      </a>
-      <div class="w-full bg-white rounded-lg shadow dark:border md:mt-0 sm:max-w-md xl:p-0 dark:bg-gray-800 dark:border-gray-700">
 
-        <div class="p-6 space-y-4 md:space-y-6 sm:p-8">
-          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">
-            Create and account
+  <section class="container flex relative">
+    
+      <div class="bg-image absolute top-0 bottom-0 left-0 w-1/2" style="background-image: url(<%= asset_path 'Registration.png' %>);">
+      <div class="theme-text text-start">
+      <h3 class="text-5xl font-semibold">Lets Get</h3>
+      
+      <h1 class="text-7xl font-bold">STARTED.</h1>
+      <p class="text-gray-900 font-semibold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc ut dignissim. Nunc sed augue ut risus pretium porta quis vel nunc. nn Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed ut purus eget nunc ut dignissim. Nunc sed augue ut risus pretium porta quis vel nunc.
+      
+      </p>
+      </div>
+
+      <div class="register-note text-center ">
+      <p class="py-2 px-5 bg-white rounded-full font-bold ">Register</p>
+      </div>
+
+      </div>
+
+      
+
+      <div class="form-container absolute top-0 bottom-0 right-0 w-1/2">
+
+        <div class="form-wrapper">
+        <%= image_tag('lifeline-logo.png', alt: "logo", style:'display: block; margin: auto;') %>
+          <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white py-2 text-center">
+            USE YOUR WORK EMAIL
           </h1>
-          <form class="space-y-4 md:space-y-6" action="#">
+          <form class="space-y-4 md:space-y-6 form-fields" action="#">
 
-            <div>
-              <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">First Name</label>
+            <div class="py-8">
+              <label for="first_name" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white uppercase">First Name</label>
               <%= f.text_field :first_name, autofocus: true, autocomplete: "first_name", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "First Name", required: true %>
             </div>
             <div>
-              <label for="first_name" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Last Name</label>
+              <label for="first_name" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white uppercase">Last Name</label>
               <%= f.text_field :last_name, autofocus: true, autocomplete: "first_name", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "First Name", required: true %>
             </div>
-            <div>
-              <label for="email" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Your email</label>
+            <div class="py-8">
+              <label for="email" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white uppercase">Email</label>
               <%= f.email_field :email, autofocus: true, autocomplete: "email", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  placeholder: "name@company.com", required: true %>
             </div>
 
             <div>
-              <label for="Role" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase">Your Role</label>
+              <label for="Role" class="block mb-2 text-lg font-medium text-gray-900 dark:text-white uppercase">Role</label>
               <div class="flex gap-3 border p-2 rounded-lg border-gray-300">
                 <%= f.radio_button :role, 'patient' %> Patient<br />
                 <%= f.radio_button :role, 'nurse' %> Nurse<br />
@@ -35,8 +52,8 @@
             </div>
 
 
-            <div>
-              <%= f.label :password, class: "block mb-2 text-sm font-medium text-gray-900 text-white uppercase" %>
+            <div class="py-8">
+              <%= f.label :password, class: "block mb-2 pb-2 font-medium text-gray-900 uppercase" %>
               <% if @minimum_password_length %>
                 <em>(<%= @minimum_password_length %> characters minimum)</em>
               <% end %>
@@ -44,30 +61,42 @@
               <%= f.password_field :password, autocomplete: "new-password", placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500",  required: true %>
             </div>
 
-            <div>
-              <%= f.label :password_confirmation, class: "block mb-2 text-sm font-medium text-gray-900 dark:text-white uppercase" %>
-              <br />
-              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "••••••••", class: "bg-gray-50 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", required: true %>
+            <div class="">
+              <%= f.label :password_confirmation, class: "block mb-2 text-lg font-medium text-gray-900 uppercase" %>
+              
+              <%= f.password_field :password_confirmation, autocomplete: "new-password", placeholder: "••••••••", class: "bg-gray-50 mb-5 border border-gray-300 text-gray-900 sm:text-sm rounded-lg focus:ring-primary-600 focus:border-primary-600 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500", required: true %>
             </div>
-            <div class="flex items-start">
-              <div class="flex items-center h-5">
+            <div class="flex item-center text-center mb-5">
+              <span class="h-5">
                 <input id="terms" aria-describedby="terms" type="checkbox" class="w-4 h-4 border border-gray-300 rounded bg-gray-50 focus:ring-3 focus:ring-primary-300 dark:bg-gray-700 dark:border-gray-600 dark:focus:ring-primary-600 dark:ring-offset-gray-800" required="">
-              </div>
-              <div class="ml-3 text-sm">
+              </span>
+              <span class="ml-3 text-sm">
                 <label for="terms" class="font-light text-gray-500 dark:text-gray-300">I accept the <a class="font-medium text-primary-600 hover:underline dark:text-primary-500" href="#">Terms and Conditions</a></label>
-              </div>
+              </span>
             </div>
-            <%= f.submit "Sign Up", class: "border border-[#0A0A1F] text-[#0A0A1F] dark:border-[#fff] p-2 dark:text-white w-32 uppercase" %>
-            <p class="text-sm font-light text-gray-500 dark:text-gray-400">
+            <div class="text-center ">
+            <%= f.submit "Register", class: "px-4 py-2 text-white button rounded-full bg-cyan-400 " %>
+            </div>
+            <p class="text-base font-light py-8 text-center">
               Already have an account?
-              <a href="#" class="font-medium text-primary-600 hover:underline dark:text-primary-500">
+              <a href="#" class="font-medium underline text-sky-500">
                 <%= render "devise/shared/links" %>
               </a>
             </p>
+            <div class="flex items-center horizontal">
+           
+            <hr> 
+            <span class="px-5 font-light">Or</span>
+            <hr>
+            </div >
+            <div class="w-68">
+            <%= image_tag('google-icon.png', alt: "google icon",style:'display: block; margin: 20px auto; height:60px; width:60px;') %>
+            </div>
+           
           </form>
         </div>
       </div>
-    </div>
+    
   </section>
 <% end %>
 

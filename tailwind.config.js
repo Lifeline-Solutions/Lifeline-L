@@ -1,8 +1,15 @@
 module.exports = {
-  content: [
-    './app/views/**/*.html.erb',
-    './app/helpers/**/*.rb',
-    './app/assets/stylesheets/**/*.css',
-    './app/javascript/**/*.js'
-  ]
-}
+  theme: {
+    extend: {
+      backgroundImage: (theme) => ({
+        "bg-image": "url('/assets/images/Registration.png')",
+      }),
+    },
+    content: [
+      "./app/views/**/*",
+      "./app/helpers/**/*.rb",
+      "./app/assets/stylesheets/**/*.css",
+      "./app/javascript/**/*.js",
+    ],
+  },
+};

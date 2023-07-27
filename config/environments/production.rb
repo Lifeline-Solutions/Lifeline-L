@@ -27,8 +27,17 @@ Rails.application.configure do
   # Compress CSS using a preprocessor.
   # config.assets.css_compressor = :sass
 
+  config.serve_static_assets = false
+
+# Compress JavaScripts and CSS  
+config.assets.compress = true
+
+# Generate digests for assets URLs  
+config.assets.digest = true
+
   # Do not fallback to assets pipeline if a precompiled asset is missed.
   config.assets.compile = false
+   config.assets.precompile += %w( '.svg' )  
 
   # Enable serving of images, stylesheets, and JavaScripts from an asset server.
   # config.asset_host = "http://assets.example.com"

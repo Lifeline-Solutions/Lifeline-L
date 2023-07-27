@@ -1,0 +1,71 @@
+.bg-image {
+  background-repeat: no-repeat;
+  width: 50vw;
+  background-size: cover;
+}
+
+.form-container {
+  background-color: white;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 0px rgba(0, 0, 0, 0.1);
+  width: 50vw;
+}
+
+.form-wrapper {
+  margin: 0 auto;
+  width: 70%;
+}
+
+.form-fields > * {
+  margin: 20px 0;
+}
+
+.button {
+  background-color: #00aeef;
+  width: 60%;
+  padding: 10px 20px;
+  text-align: center;
+  display: inline-block;
+  font-size: 16px;
+}
+
+.login-text {
+  text-decoration: underline;
+  color: #00aeef;
+}
+
+hr {
+  width: 6rem;
+}
+
+.horizontal {
+  margin: 0 auto;
+  width: 50%;
+}
+
+.theme-text {
+  width: 45%;
+  padding: 10px 20px;
+  margin-left: 2rem;
+  position: absolute;
+  top: 40%;
+}
+
+.theme-text h3 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: #4d4747;
+}
+
+.theme-text h1 {
+  font-size: 3rem;
+  font-weight: 700;
+}
+
+.register-note {
+  width: 8rem;
+  position: absolute;
+  top: 20%;
+  left: 42%;
+}
