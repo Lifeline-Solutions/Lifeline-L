@@ -32,8 +32,8 @@ Tailwind CSS
 # Sign into posgresql
 su - postgres
 
-# Create user
-create user 'user_name' with encrypted password 'mypassword'
+# Create users
+create users 'user_name' with encrypted password 'mypassword'
 
 # Load the schema
 rails db:schema:load

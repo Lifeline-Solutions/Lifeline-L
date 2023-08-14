@@ -1,0 +1,26 @@
+<% @user.each do |u| %>
+<div class="p-6 sm:ml-64 flex border-[#00AEEF] border m-6">
+
+  <div class="h-40 w-60">
+    <%= image_tag(u.photo_id) %>
+  </div>
+<div class="ml-3">
+  <div class="flex mr-6">
+    <p class="mr-6">First Name: <%= u.first_name %></p>
+    <p class="mr-6">Last Name: <%= u.last_name %></p>
+    <p class="mr-6">Role: <%= u.role %></p>
+
+  </div>
+  <div class="mr-6">
+    <p class="mr-6">Email: <%= u.email %></p>
+    <p class="mr-6">ID Number: <%= u.id_number %></p>
+    <p class="mr-6">Phone Number: +254<%= u.phone_number %></p>
+
+  </div>
+
+
+</div>
+
+
+</div>
+<% end %>
