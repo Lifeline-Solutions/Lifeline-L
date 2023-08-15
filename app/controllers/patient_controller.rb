@@ -16,7 +16,7 @@ class PatientController < ApplicationController
     @patient.user_id = current_user.id
     respond_to do |format|
       if @patient.save
-        format.html { redirect_to @patient, notice: 'Patient was successfully created.' }
+        format.html { redirect_to "/patient/#{current_user.id}", notice: 'Patient was successfully created.' }
       else
         format.html { redirect_to patient_index_url notice: 'Failure' }
       end
