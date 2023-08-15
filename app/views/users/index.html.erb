@@ -1,8 +1,8 @@
 <% @user.each do |u| %>
-<div class="p-6 sm:ml-64 flex border-[#00AEEF] border m-6">
+<div class="p-6 sm:ml-64 flex border-[#00AEEF] border m-6 h-60 relative">
 
-  <div class="h-40 w-60">
-    <%= image_tag(u.photo_id) %>
+  <div class="h-full w-60 flex items-center justify-center">
+    <%= image_tag(u.photo_id, class: "max-w-full max-h-full")%>
   </div>
 <div class="ml-3">
   <div class="flex mr-6">
@@ -17,10 +17,16 @@
     <p class="mr-6">Phone Number: +254<%= u.phone_number %></p>
 
   </div>
-
-
 </div>
-
-
+ <div class="w-20 h-20">
+    <%= raw RQRCode::QRCode.new("http://localhost:3000/patient/#{u.id}")
+      .as_svg(border_modules: 2, color: '000', shape_rendering: 'crispEdges', module_size: 2, standalone: true) 
+    %>
+  </div>
+  <div class="absolute bottom-5 right-5">
+     <a href="../patient/new" class="m-2 p-3 border border-[#00AEEF] rounded-md text-[#00AEEF]">Add details</a>
+     <a href="../patient/<%= u.id %>" class="m-2 p-3 border border-[#00AEEF] rounded-md text-[#00AEEF]">See records</a> 
+  </div>
+  
 </div>
 <% end %>
