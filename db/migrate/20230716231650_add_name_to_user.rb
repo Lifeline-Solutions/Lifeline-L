@@ -6,6 +6,5 @@ class AddNameToUser < ActiveRecord::Migration[7.0]
     add_column :users, :photo_id, :string
     add_column :users, :phone_number, :integer
     add_column :users, :id_number, :string
-
   end
 end
