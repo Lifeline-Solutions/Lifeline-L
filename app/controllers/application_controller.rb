@@ -13,18 +13,15 @@ class ApplicationController < ActionController::Base
                :phone_number)
     end
 
-    #create a new profile for the user after creating user
+    # create a new profile for the user after creating user
 
     def after_sign_up_path_for(resource)
-      if current_user.profile.nil?
-        Profile.create(user_id: current_user.id)
-        build_resource({})
-        resources.build_profile
-        respond_with resource
-      end
+      return unless current_user.profile.nil?
+
+      Profile.create(user_id: current_user.id)
+      build_resource({})
+      resources.build_profile
+      respond_with resource
     end
-
   end
-
-
 end
