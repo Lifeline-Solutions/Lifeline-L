@@ -75,3 +75,9 @@ group :test do
 end
 
 gem 'devise', '~> 4.9', '>= 4.9.2'
+
+# QR code gem
+
+gem 'rqrcode', '~> 2.0'
+
+gem 'motor-admin'

@@ -17,4 +17,7 @@ class User < ApplicationRecord
   end
   has_one :patient
   belongs_to :patient, optional: true
+
+  has_one :profile
+  accepts_nested_attributes_for :profile
 end
