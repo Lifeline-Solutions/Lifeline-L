@@ -12,16 +12,5 @@ class ApplicationController < ActionController::Base
       u.permit(:first_name, :last_name, :role, :email, :password, :current_password, :photo_id, :id_number,
                :phone_number)
     end
-
-    # create a new profile for the user after creating user
-
-    def after_sign_up_path_for(resource)
-      return unless current_user.profile.nil?
-
-      Profile.create(user_id: current_user.id)
-      build_resource({})
-      resources.build_profile
-      respond_with resource
-    end
   end
 end
