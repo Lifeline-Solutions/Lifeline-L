@@ -27,7 +27,7 @@ class User < ApplicationRecord
                      action: 'index',
                      id:,
                      only_path: false,
-                     host: 'http://127.0.0.1/',
+                     host: 'https://lifeline.fly.dev/',
                      source: 'from_qr')
     qrcode = RQRCode::QRCode.new(qr_url)
 
@@ -37,7 +37,7 @@ class User < ApplicationRecord
       fill: 'white',
       color: 'black',
       size: 250,
-      border_modules: 4,
+      border_modules: 2,
       module_px_size: 6,
       file: nil # path to write
     )
