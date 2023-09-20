@@ -44,17 +44,6 @@
       <%= f.email_field :email, class: "w-[100%]  h-[50px]  bg-[#F0F2F2] p-2", placeholder: "email", required: true %>
     </div>
 
-    <div class="flex w-[90%] mx-auto  gap-1 flex-col">
-      <p class="text-[#565151] uppercase  ">Your Role</p>
-      <div class="flex w-[100%] gap-3 bg-[#F0F2F2] p-2 pt-4 pb-4">
-
-        <%= f.radio_button :role, 'patient', required: true %> Patient<br />
-        <%= f.radio_button :role, 'nurse', required: true %> Nurse<br />
-        <%= f.radio_button :role, 'radiologist', required: true %>Radiologist<br />
-        <%= f.radio_button :role, 'lab_technician', required: true %>Lab Technician<br />
-        <%= f.radio_button :role, 'doctor', required: true %> Doctor<br />
-      </div>
-    </div>
 
     <div class="flex w-[90%] flex-row  gap-6 justify-between">
       <div class="flex  w-[50%] mx-auto  gap-1 flex-col">
