@@ -1,4 +1,7 @@
 class PatientController < ApplicationController
+
+  before_action :authenticate_user!, only: [:show, :new, :create, :destroy, :edit, :update]
+  # before_action :update_allowed_parameters, if: :devise_controller?
   def index
     @patients = Patient.all
     @patient = User.all
