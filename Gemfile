@@ -89,3 +89,6 @@ gem "redis", "~> 5.0"
 gem "sentry-ruby", "~> 5.11"
 
 gem "sentry-rails", "~> 5.11"
+
+gem 'faker', '~> 3.2'
+gem "simple_calendar", "~> 2.4"

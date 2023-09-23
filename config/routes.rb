@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  # get 'events/index'
   mount Motor::Admin => '/motor_admin'
   devise_for :users
   root "patient#index"
@@ -9,5 +10,6 @@ Rails.application.routes.draw do
 
   resources :home
   resources :patient
+  resources :events, only: [:index, :create, :update, :destroy]
 
 end
