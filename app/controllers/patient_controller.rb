@@ -1,6 +1,8 @@
 class PatientController < ApplicationController
+  before_action :authenticate_user!
   def index
     @patients = Patient.all
+    @patient = User.all
   end
 
   def show
